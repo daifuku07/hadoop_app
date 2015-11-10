@@ -69,6 +69,5 @@
         <jarDirectory url="file:///usr/local/hadoop/share/hadoop/yarn" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="net.java.dev.jna:jna:4.2.1" level="project" />
   </component>
 </module>
