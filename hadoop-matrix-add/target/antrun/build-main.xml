@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <mkdir dir="/home/gpu/workspace/hadoop_app/hadoop-matrix-add/target/test-dir"/>
+  <mkdir dir="/home/gpu/workspace/hadoop_app/hadoop-matrix-add/target/test-dir"/>
+</target>
+</project>
