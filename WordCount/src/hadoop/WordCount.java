@@ -47,7 +47,7 @@ public class WordCount extends Configured
         private Path[] localFiles;
         private URI[] cacheFiles;
 
-        public static int SIZE = 100;
+        public static int SIZE = 1000;
 
         @Override
         protected void setup(Context context) throws IOException,
@@ -92,9 +92,7 @@ public class WordCount extends Configured
             return;
           }
 
-
           System.setProperty("java.library.path", libPath);
-          //System.load(libPath);
 
           System.out.println("Hello CUDA through JNI!");
           // make an instance of our class to access the native method
@@ -102,33 +100,28 @@ public class WordCount extends Configured
           CudaWrapper m = new CudaWrapper(libPath);
           //CudaWrapper m = new CudaWrapper("/home/gpu/workspace/hadoop_app/WordCount/src/jni/program.so");
 
-//          for(int l = 0; l < 10; l ++) {
-            // declare three arras
-            float[] a = new float[SIZE];
-            float[] b = new float[SIZE];
-            float[] c = new float[SIZE];
-            // initialize two arrays
-            for (int i = 0; i < a.length; i++)
-              a[i] = b[i] = i;
-            System.out.println("J: Arrays initialized, calling C.");
-            // call the native method, which in turn will execute kernel code on the device
-            for (int p = 0; p < 100; p++) {
-              System.out.println("J:calling C.");
-              int retVal = m.CUDAProxy_matrixAdd(a, b, c);
-              System.out.println("J: retVal = \nJ:c[]= " + retVal);
-              // print the results
-              for (int i = 0; i < retVal; i++)
-                System.out.print("J: " + c[i] + "| ");
-              System.out.println();
-            }
-//          }
-            //default parsing - /n /t carriage return are the delimiters set
-            StringTokenizer itr = new StringTokenizer(str.toLowerCase());
+          float[] a = new float[SIZE];
+          float[] b = new float[SIZE];
+          float[] c = new float[SIZE];
+
+          // initialize two arrays
+          for (int i = 0; i < SIZE; i++)
+            a[i] = b[i] = i;
+
+          // call the native method, which in turn will execute kernel code on the device
+          System.out.println("J:calling C. Size = " + a.length);
+          int retVal = m.CUDAProxy_matrixAdd(a, b, c);
+          System.out.println("J: retVal = \nJ:c[]= " + retVal);
+          // print the results
+          for (int i = 0; i < retVal; i++)
+            System.out.print("J: " + c[i] + "| ");
+          System.out.println();
+
+          StringTokenizer itr = new StringTokenizer(str.toLowerCase());
           while (itr.hasMoreTokens()) {
                 word.set(itr.nextToken());
                 context.write(word, one);
-                //hello.hello();
-            }
+          }
         }
     }
 
