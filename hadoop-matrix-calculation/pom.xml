@@ -1,7 +1,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
-	<artifactId>hadoop-matrix-add</artifactId>
+	<artifactId>hadoop-matrix-calculation</artifactId>
 	<version>3.0</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -108,7 +108,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>hadoop-examples-matrix-add</finalName>
+		<finalName>hadoop-examples-matrix-calculation</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

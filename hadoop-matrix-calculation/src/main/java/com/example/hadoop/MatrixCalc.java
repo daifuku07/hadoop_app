@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 
-public class MatrixAdd extends Configured implements Tool {
+public class MatrixCalc extends Configured implements Tool {
 
 	public static class MyMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 		private static final IntWritable ONE = new IntWritable(1);
@@ -114,8 +114,8 @@ public class MatrixAdd extends Configured implements Tool {
 
 	@Override public int run(final String[] args) throws Exception {
 		final Configuration conf = this.getConf();
-		final Job job = Job.getInstance(conf, "Matrix Add");
-		job.setJarByClass(MatrixAdd.class);
+		final Job job = Job.getInstance(conf, "Matrix Calculation");
+		job.setJarByClass(MatrixCalc.class);
 
 		job.setMapperClass(MyMapper.class);
 		job.setReducerClass(MyReducer.class);
@@ -139,7 +139,7 @@ public class MatrixAdd extends Configured implements Tool {
 	}
 
 	public static void main(final String[] args) throws Exception {
-		final int returnCode = ToolRunner.run(new Configuration(), new MatrixAdd(), args);
+		final int returnCode = ToolRunner.run(new Configuration(), new MatrixCalc(), args);
 		System.exit(returnCode);
 	}
 }
