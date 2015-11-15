@@ -20,6 +20,7 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 
@@ -30,12 +31,11 @@ public class MatrixAdd extends Configured implements Tool {
 		private final transient Text word = new Text();
 		private Path[] localFiles;
 
-		public static int SIZE = 10000;
+		public static int SIZE = 100000;
 
 		@Override public void map(final LongWritable key, final Text value, final Context context)
 			throws IOException, InterruptedException {
 			final String line = value.toString();
-			final StringTokenizer tokenizer = new StringTokenizer(line);
 
 			//Load Shared Library
 			localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
@@ -88,10 +88,13 @@ public class MatrixAdd extends Configured implements Tool {
 				System.out.print("J: " + c[i] + "| ");
 			System.out.println();
 
-			while (tokenizer.hasMoreTokens()) {
-				word.set(tokenizer.nextToken());
-				context.write(word, ONE);
-			}
+			word.set(Arrays.toString(c));
+			context.write(word, ONE);
+
+//			while (tokenizer.hasMoreTokens()) {
+//				word.set(tokenizer.nextToken());
+//				context.write(word, ONE);
+//			}
 		}
 	}
 
