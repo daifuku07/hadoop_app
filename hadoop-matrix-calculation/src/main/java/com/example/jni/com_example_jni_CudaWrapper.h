@@ -9,11 +9,11 @@ extern "C" {
 #endif
 /*
  * Class:     com_example_jni_CudaWrapper
- * Method:    CUDAProxy_matrixAdd
- * Signature: ([F[F[F)I
+ * Method:    CUDAProxy_matrixMul
+ * Signature: ([F[F[FI)I
  */
-JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixAdd
-  (JNIEnv *, jobject, jfloatArray, jfloatArray, jfloatArray);
+JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul
+  (JNIEnv *, jobject, jfloatArray, jfloatArray, jfloatArray, jint);
 
 #ifdef __cplusplus
 }

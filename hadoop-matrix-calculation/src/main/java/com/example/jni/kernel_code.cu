@@ -27,11 +27,20 @@ extern "C"
 {
 #endif
 
-	__global__ void add_matrix(float *a, float *b, float *c, int N)
+	__global__ void add_matrix(float *A, float *B, float *C, int n)
 	{
-		int idx = blockIdx.x * blockDim.x + threadIdx.x;
-		if (idx < N) c[idx] = a[idx] + b[idx];
+		unsigned int i;
+		float product = 0;
 
+		int row = blockIdx.y * blockDim.y + threadIdx.y;
+		int col = blockIdx.x * blockDim.x + threadIdx.x;
+
+		if(row < n && col < n){
+			for (i = 0; i < n; i++)
+				product += A[row * n + i] * B[i * n + col];
+
+			C[row*n + col] = (float)product;
+		}
 	}
 #ifdef __cplusplus
 }
@@ -64,7 +73,7 @@ extern "C"
 		float *a_d, *b_d, *c_d;
 		//const int N = 10;
 
-		size_t size = N * sizeof (float);
+		size_t size = N * N * sizeof (float);
 		/*
 		// allocate memory in the host for array a
 		a_h = (float *) malloc(size);
@@ -94,10 +103,11 @@ extern "C"
 		cudaMemcpy(a_d, a_h, size, cudaMemcpyHostToDevice);
 		cudaMemcpy(b_d, b_h, size, cudaMemcpyHostToDevice);
 		// do calculations on device
-		int block_size = 10;
-		int n_blocks = N / block_size + (N % block_size == 0 ? 0 : 1);
+		int BLOCK_SIZE = 32;
+		dim3 block(BLOCK_SIZE, BLOCK_SIZE);
+		dim3 grid((size + BLOCK_SIZE - 1) / BLOCK_SIZE, (size + BLOCK_SIZE - 1) / BLOCK_SIZE);
 		//while(1){
-		add_matrix <<<n_blocks, block_size >>>(a_d, b_d, c_d, N);
+		add_matrix <<<grid, block >>>(a_d, b_d, c_d, N);
 		//}
 		// Retrieve results from the device
 		cudaMemcpy(c_h, c_d, size, cudaMemcpyDeviceToHost);

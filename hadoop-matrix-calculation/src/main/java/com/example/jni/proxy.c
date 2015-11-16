@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "com_example_jni_CudaWrapper.h"
 
-JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixAdd(JNIEnv *env, jobject obj, jfloatArray aArray, jfloatArray bArray, jfloatArray cArray)
+JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul(JNIEnv *env, jobject obj, jfloatArray aArray, jfloatArray bArray, jfloatArray cArray, jint n)
 {
-	int i = 0;
+	int i = 0, j = 0;
 	jsize N;
 	//printf("C: fetching arrays from Java\n");
 	jfloat *a = (*env)->GetFloatArrayElements(env, aArray, 0);
@@ -13,7 +13,14 @@ JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixAdd(JNI
 	N = (*env)->GetArrayLength(env, aArray);
 	//printf("C: calling CUDA kernel\n");
 	printf("C: array size = %d\n", N);
-	cuda_matrixAdd(a, b, c, N);
+	cuda_matrixAdd(a, b, c, n);
+
+	for(i = 0; i < n; i++){
+		for(j = 0; j < n; j++){
+			printf("%1.0f", c[i*n+j]);
+		}
+	}
+
 	//printf("C: back from CUDA kernel, coping data to Java\n");
 	(*env)->ReleaseFloatArrayElements(env, aArray, a, 0);
 	(*env)->ReleaseFloatArrayElements(env, bArray, b, 0);

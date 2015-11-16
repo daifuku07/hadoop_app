@@ -31,7 +31,7 @@ public class MatrixCalc extends Configured implements Tool {
 		private final transient Text word = new Text();
 		private Path[] localFiles;
 
-		public static int SIZE = 100000;
+		public static int SIZE = 5;
 
 		@Override public void map(final LongWritable key, final Text value, final Context context)
 			throws IOException, InterruptedException {
@@ -70,17 +70,21 @@ public class MatrixCalc extends Configured implements Tool {
 			//Call CUDA
 			CudaWrapper m = new CudaWrapper(libPath);
 
-			float[] a = new float[SIZE];
-			float[] b = new float[SIZE];
-			float[] c = new float[SIZE];
+			float[] a = new float[SIZE * SIZE];
+			float[] b = new float[SIZE * SIZE];
+			float[] c = new float[SIZE * SIZE];
 			// initialize two arrays
-			for (int i = 0; i < a.length; i++)
-				a[i] = b[i] = i;
+			for (int i = 0; i < SIZE; i++){
+				for(int j = 0; j < SIZE; j++){
+					a[i * SIZE + j] = i; 
+					b[i * SIZE + j] = i;
+				}
+			}
 			System.out.println("J: Arrays initialized, calling C. Size = " + a.length);
 			
 			// call the native method, which in turn will execute kernel code on the device
 			System.out.println("J:calling C.");
-			int retVal = m.CUDAProxy_matrixAdd(a, b, c);
+			int retVal = m.CUDAProxy_matrixMul(a, b, c, SIZE);
 			System.out.println("J: retVal = \nJ:c[]= " + retVal);
 			
 			// print the results
