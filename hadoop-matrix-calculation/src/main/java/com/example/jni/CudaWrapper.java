@@ -7,5 +7,5 @@ public class CudaWrapper {
     System.load(path);
   }
 
-  public native int CUDAProxy_matrixMul(float[] a, float[] b, float[] c, int n);
+  public native int CUDAProxy_matrixMul(float[] a, float[] b, float[] c, int n, int device_id);
 }

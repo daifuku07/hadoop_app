@@ -12,6 +12,8 @@ int main(int argc, char * argv[]){
 	int i,j,nrow,ncol;//,rows,columns,i;
 	float *A, *B, *C;
 
+	cudaSetDevice(1);
+
 	nrow = atoi(argv[1]);
 	ncol = atoi(argv[2]);
 
@@ -24,6 +26,8 @@ int main(int argc, char * argv[]){
 	B = (float *)malloc(size);
 	C = (float *)malloc(size);
 
+	printf("size = %d x %d\n", nrow, ncol);
+
 	srand(time(NULL));
 	for(i=0;i<nrow;i++)
 	{
@@ -33,9 +37,9 @@ int main(int argc, char * argv[]){
 			B[i*ncol+j] = (float)i;
 			//B[i*ncol+j] = ((float)rand())/RAND_MAX;
 			//C[i*ncol+j] = ((float)rand())/RAND_MAX;
-			printf("%1.0f ", B[i*ncol+j]);
+			//printf("%1.0f ", B[i*ncol+j]);
 		}
-		printf("\n");
+		//printf("\n");
 	}
 
 
@@ -53,7 +57,7 @@ int main(int argc, char * argv[]){
 			printf("%1.0f ", C[i*ncol+j]);
 			//fprintf(output,"%1f ", A[i*ncol+j]);
 		}
-		printf("\n");
+		//printf("\n");
 		//fprintf(output,"\n");
 	}
 

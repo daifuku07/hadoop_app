@@ -31,74 +31,78 @@ public class MatrixCalc extends Configured implements Tool {
 		private final transient Text word = new Text();
 		private Path[] localFiles;
 
-		public static int SIZE = 5;
+		public static int SIZE = 128;
 
-		@Override public void map(final LongWritable key, final Text value, final Context context)
+		@Override
+		public void map(final LongWritable key, final Text value, final Context context)
 			throws IOException, InterruptedException {
+			int size = 0;
+			float num = 0;
+			int i = 0, j = 0;
 			final String line = value.toString();
+			final StringTokenizer tokenizer = new StringTokenizer(line);
+
+			System.out.println("***GPU Device >> " + context.getGpuDeviceID());
 
 			//Load Shared Library
 			localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
 
 			String libPath = "";
-			if (null != localFiles)
-			{
-				System.out.println("***localFiles.length: " + localFiles.length);
-				if (localFiles.length > 0)
-				{
-					for (int i = 0; i < localFiles.length; i++)
-					{
+			if (null != localFiles) {
+				if (localFiles.length > 0) {
+					for (i = 0; i < localFiles.length; i++) {
 						Path localFile = localFiles[i];
-						System.out.println("***local file: " + localFile);
-
-						if(localFile.toString().endsWith("program.so"))
-						{
+						if(localFile.toString().endsWith("program.so")) {
 							libPath = localFile.toString();
 						}
 					}
 				}
 			}
-			else
-			{
+			else {
 				System.out.println("***localFiles was null!");
 				return;
 			}
-
 
 			System.setProperty("java.library.path", libPath);
 
 			//Call CUDA
 			CudaWrapper m = new CudaWrapper(libPath);
 
-			float[] a = new float[SIZE * SIZE];
-			float[] b = new float[SIZE * SIZE];
-			float[] c = new float[SIZE * SIZE];
-			// initialize two arrays
-			for (int i = 0; i < SIZE; i++){
-				for(int j = 0; j < SIZE; j++){
-					a[i * SIZE + j] = i; 
-					b[i * SIZE + j] = i;
-				}
+			size = Integer.parseInt(tokenizer.nextToken());
+
+			float[] a = new float[size * size];
+			float[] b = new float[size * size];
+			float[] c = new float[size * size];
+
+			System.out.println("***line(" + size + "): ");
+			for(i = 0; tokenizer.hasMoreTokens(); i++) {
+				num = Float.parseFloat(tokenizer.nextToken());
+				a[i] = num;
+				b[i] = num;
+				System.out.println(num);
 			}
+
+			// initialize two arrays
+//			for (i = 0; i < SIZE; i++){
+//				for(j = 0; j < SIZE; j++){
+//					a[i * SIZE + j] = i;
+//					b[i * SIZE + j] = i;
+//				}
+//			}
 			System.out.println("J: Arrays initialized, calling C. Size = " + a.length);
 			
 			// call the native method, which in turn will execute kernel code on the device
 			System.out.println("J:calling C.");
-			int retVal = m.CUDAProxy_matrixMul(a, b, c, SIZE);
+			int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
 			System.out.println("J: retVal = \nJ:c[]= " + retVal);
 			
 			// print the results
-			for (int i = 0; i < retVal; i++)
-				System.out.print("J: " + c[i] + "| ");
-			System.out.println();
+//			for (int i = 0; i < retVal; i++)
+//				System.out.print("J: " + c[i] + "| ");
+//			System.out.println();
 
 			word.set(Arrays.toString(c));
 			context.write(word, ONE);
-
-//			while (tokenizer.hasMoreTokens()) {
-//				word.set(tokenizer.nextToken());
-//				context.write(word, ONE);
-//			}
 		}
 	}
 
@@ -109,7 +113,11 @@ public class MatrixCalc extends Configured implements Tool {
 		public void reduce(final Text key, final Iterable<IntWritable> values, final Context context)
 		throws IOException, InterruptedException {
 		int sum = 0;
+		System.out.println("***reduce");
+		System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+
 		for (final IntWritable val : values) {
+			System.out.println("***reduce calc");
 			sum += val.get();
 		}
 		context.write(key, new IntWritable(sum));

@@ -3,32 +3,11 @@
 #include <string.h>
 #include <math.h>
 
-// includes, project
-//#include <cutil_inline.h>
-//#include <helper_cuda.h>
+#define BLOCK_SIZE 32
 
-// includes, kernels
-//#include <matrixAdd_kernel.cu>
-#ifndef _MATRIXADD_KERNEL_H_
-#define _MATRIXADD_KERNEL_H_
+extern "C" {
 
-#include <stdio.h>
-
-#define SDATA( index)      cutilBankChecker(sdata, index)
-
-////////////////////////////////////////////////////////////////////////////////
-//! Simple test kernel for device functionality
-//! @param g_idata  input data in global memory
-//! @param g_odata  output data in global memory
-////////////////////////////////////////////////////////////////////////////////
-// Kernel that executes on the CUDA device
-#ifdef __cplusplus
-extern "C"
-{
-#endif
-
-	__global__ void add_matrix(float *A, float *B, float *C, int n)
-	{
+	__global__ void add_matrix(float *A, float *B, float *C, int n){
 		unsigned int i;
 		float product = 0;
 
@@ -42,91 +21,35 @@ extern "C"
 			C[row*n + col] = (float)product;
 		}
 	}
-#ifdef __cplusplus
-}
-#endif 
-#endif // #ifndef _MATRIXADD_KERNEL_H_
-////////////////////////////////////////////////////////////////////////////////
-// declaration, forward
-/*
- * void runTest( int argc, char** argv);
- *
- * extern "C"
- * void computeGold( float* reference, float* idata, const unsigned int len);
- */
-////////////////////////////////////////////////////////////////////////////////
-// Program main
-////////////////////////////////////////////////////////////////////////////////
-
-#ifdef __cplusplus
-extern "C"
-{
-#endif
 
 	// CUDA code here
-
-	int cuda_matrixAdd(float *a_h, float *b_h, float *c_h, int N)
-		/*
-			 int main(int argc, char* argv)
-		 */
-	{
+	int cuda_matrixAdd(float *a_h, float *b_h, float *c_h, int N){
 		float *a_d, *b_d, *c_d;
-		//const int N = 10;
-
 		size_t size = N * N * sizeof (float);
-		/*
-		// allocate memory in the host for array a
-		a_h = (float *) malloc(size);
-		// allocate memory in the host for array b
-		b_h = (float *) malloc(size);
-		// allocate memory in the host for array c
-		c_h = (float *) malloc(size);
-		// initialize the arrays a and b
-		for (int i = 0; i < N; i++)
-		{
-		printf("i = %d |\n", i);
-		a_h[i] = (float) i;
-		printf("a_h[%d] = %f\n", i, a_h[i]);
-		b_h[i] = (float) i;
-		}
-		printf("\nA:");
-		for (int i = 0; i < N; i++) printf("%5.2f|", a_h[i]);
-		printf("\nB:");
-		for (int i = 0; i < N; i++) printf("%5.2f|", b_h[i]);
-		printf("\n");
-		 */
+
 		// allocate memory in the GPU device for a, b and c
 		cudaMalloc((void **) & a_d, size);
 		cudaMalloc((void **) & b_d, size);
 		cudaMalloc((void **) & c_d, size);
+
 		// copy from host to GPU device
 		cudaMemcpy(a_d, a_h, size, cudaMemcpyHostToDevice);
 		cudaMemcpy(b_d, b_h, size, cudaMemcpyHostToDevice);
+
 		// do calculations on device
-		int BLOCK_SIZE = 32;
 		dim3 block(BLOCK_SIZE, BLOCK_SIZE);
 		dim3 grid((size + BLOCK_SIZE - 1) / BLOCK_SIZE, (size + BLOCK_SIZE - 1) / BLOCK_SIZE);
-		//while(1){
+
+		// Launch GPU
 		add_matrix <<<grid, block >>>(a_d, b_d, c_d, N);
-		//}
-		// Retrieve results from the device
+
 		cudaMemcpy(c_h, c_d, size, cudaMemcpyDeviceToHost);
-		// print out the results
-		//printf("CU: c[]:");
-		//for (int i = 0; i < N; i++) printf("%5.2f|", c_h[i]);
-		//printf("\n");
-		/*
-		// Cleanup
-		free(a_h);
-		free(b_h);
-		free(c_h);
-		 */
+
 		cudaFree(a_d);
 		cudaFree(b_d);
 		cudaFree(c_d);
+
 		return N;
 	}
 
-#ifdef __cplusplus
 }
-#endif 
