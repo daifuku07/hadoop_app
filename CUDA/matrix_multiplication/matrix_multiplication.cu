@@ -54,7 +54,7 @@ int main(int argc, char * argv[]){
 	{
 		for(j=0;j<ncol;j++)
 		{
-			printf("%1.0f ", C[i*ncol+j]);
+			printf("%1.1f ", C[i*ncol+j]);
 			//fprintf(output,"%1f ", A[i*ncol+j]);
 		}
 		//printf("\n");
@@ -95,7 +95,7 @@ void matrixMul(float * h_A,float * h_B, float * h_C, int nrow,int ncol){
 
 	//run kernel function with 32 threads for each block
 	dim3 block(BLOCK_SIZE, BLOCK_SIZE);
-	dim3 grid((size + BLOCK_SIZE - 1) / BLOCK_SIZE, (size + BLOCK_SIZE - 1) / BLOCK_SIZE);
+	dim3 grid((nrow + BLOCK_SIZE - 1) / BLOCK_SIZE, (ncol + BLOCK_SIZE - 1) / BLOCK_SIZE);
 	//dim3 grid((d_C.width+block.x - 1) / block.x, (d_C.height+block.y - 1) / block.y);
 	matrixMulKernel<<<grid, block>>>(d_A,d_B,d_C,ncol);
 
