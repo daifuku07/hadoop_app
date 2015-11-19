@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <string.h>
 #include <math.h>
 
@@ -27,10 +28,36 @@ extern "C" {
 		float *a_d, *b_d, *c_d;
 		size_t size = N * N * sizeof (float);
 
+		/*
+		float *a = (float *)malloc(N * N * sizeof(float));
+		float *b = (float *)malloc(N * N * sizeof(float));
+
+		for(int i = 0; i < N; i++){
+			for(int j = 0; j < N; j++){
+				a[i] = i;
+				b[i] = i;
+			}
+		}
+
+		a_h = a;
+		b_h = b;
+		*/
+
 		// allocate memory in the GPU device for a, b and c
 		cudaMalloc((void **) & a_d, size);
 		cudaMalloc((void **) & b_d, size);
 		cudaMalloc((void **) & c_d, size);
+
+		/*
+		int s = 0;
+		while(1){
+			sleep(3);
+			s++;
+			sleep(3);
+			s--;
+			sleep(3);
+		}
+	*/
 
 		// copy from host to GPU device
 		cudaMemcpy(a_d, a_h, size, cudaMemcpyHostToDevice);
@@ -44,7 +71,7 @@ extern "C" {
 		add_matrix <<<grid, block >>>(a_d, b_d, c_d, N);
 
 		cudaMemcpy(c_h, c_d, size, cudaMemcpyDeviceToHost);
-
+		
 		cudaFree(a_d);
 		cudaFree(b_d);
 		cudaFree(c_d);

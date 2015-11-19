@@ -4,17 +4,22 @@
 JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul(JNIEnv *env, jobject obj, jfloatArray aArray, jfloatArray bArray, jfloatArray cArray, jint n, jint device_id)
 {
 	int i = 0, j = 0;
-	jsize N;
+	jsize N = 0;
 	printf("C: device id >> %d\n", device_id);
 	//printf("C: fetching arrays from Java\n");
+	
+	//jfloat *a, *b;
 	jfloat *a = (*env)->GetFloatArrayElements(env, aArray, 0);
 	jfloat *b = (*env)->GetFloatArrayElements(env, bArray, 0);
 	jfloat *c = (*env)->GetFloatArrayElements(env, cArray, 0);
+		
 	//printf("C: Got reference to all a, b, and c\n");
-	N = (*env)->GetArrayLength(env, aArray);
+	N = (*env)->GetArrayLength(env, cArray);
 	//printf("C: calling CUDA kernel\n");
 	//printf("C: array size = %d\n", N);
+	
 	cuda_matrixAdd(a, b, c, n);
+	
 	//printf("C: back from CUDA kernel, coping data to Java\n");
 	(*env)->ReleaseFloatArrayElements(env, aArray, a, 0);
 	(*env)->ReleaseFloatArrayElements(env, bArray, b, 0);

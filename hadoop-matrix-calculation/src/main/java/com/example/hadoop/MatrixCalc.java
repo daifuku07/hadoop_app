@@ -79,7 +79,7 @@ public class MatrixCalc extends Configured implements Tool {
 				num = Float.parseFloat(tokenizer.nextToken());
 				a[i] = num;
 				b[i] = num;
-				System.out.println(num);
+				//System.out.println(num);
 			}
 
 			// initialize two arrays
@@ -95,7 +95,7 @@ public class MatrixCalc extends Configured implements Tool {
 			System.out.println("J:calling C.");
 			int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
 			System.out.println("J: retVal = \nJ:c[]= " + retVal);
-			
+
 			// print the results
 //			for (int i = 0; i < retVal; i++)
 //				System.out.print("J: " + c[i] + "| ");

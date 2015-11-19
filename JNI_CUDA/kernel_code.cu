@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
+#include <unistd.h>
 // includes, project
 //#include <cutil_inline.h>
 #include <helper_cuda.h>
@@ -43,7 +43,6 @@ __global__ void mmul_matrix(float *a, float *b, float *c, int N)
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < N) c[idx] = a[idx] * b[idx];
-
 }
 #ifdef __cplusplus
 }
@@ -155,6 +154,9 @@ int cuda_matrixMmul(float *a_h, float *b_h, float *c_h, int N){
 	printf("\n");
 	 */
 	// allocate memory in the GPU device for a, b and c
+	
+	sleep(5);
+
 	cudaMalloc((void **) & a_d, size);
 	cudaMalloc((void **) & b_d, size);
 	cudaMalloc((void **) & c_d, size);

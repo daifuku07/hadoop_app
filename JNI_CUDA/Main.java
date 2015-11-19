@@ -6,7 +6,7 @@ import java.io.File;
  */
 public class Main
 {
-	public static int SIZE = 1000;
+	public static int SIZE = 3;
 
 	static
 	{
@@ -39,7 +39,6 @@ public class Main
 		// make an instance of our class to access the native method
 		Main m = new Main();
 
-		while(true){
 		// declare three arras
 		float[] a = new float[SIZE];
 		float[] b = new float[SIZE];
@@ -55,6 +54,5 @@ public class Main
 		for (int i = 0; i < SIZE; i++)
 			System.out.print(c[i] + "| ");
 		System.out.println();
-		}
 	}
 }

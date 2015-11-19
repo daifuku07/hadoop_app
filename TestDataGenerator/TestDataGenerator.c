@@ -6,7 +6,7 @@ int main(int argc, char * argv[]){
 	
 	size = atoi(argv[1]);
 	
-	printf("%d\n", size);
+	printf("%d ", size);
 	for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
 			printf("%d ", i);
