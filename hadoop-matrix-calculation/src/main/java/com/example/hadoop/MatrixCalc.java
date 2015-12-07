@@ -26,89 +26,91 @@ import java.util.StringTokenizer;
 
 public class MatrixCalc extends Configured implements Tool {
 
+	private static boolean GPU_FLAG = true;
+
 	public static class MyMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 		private static final IntWritable ONE = new IntWritable(1);
 		private final transient Text word = new Text();
 		private Path[] localFiles;
 
-		public static int SIZE = 128;
-
 		@Override
 		public void map(final LongWritable key, final Text value, final Context context)
 			throws IOException, InterruptedException {
-			int size = 0;
-			float num = 0;
-			int i = 0, j = 0;
 			final String line = value.toString();
 			final StringTokenizer tokenizer = new StringTokenizer(line);
 
-			System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+			int i, j, k;
+			int num = 0;
 
-			//Load Shared Library
-			localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
+			int size = Integer.parseInt(tokenizer.nextToken());
 
-			String libPath = "";
-			if (null != localFiles) {
-				if (localFiles.length > 0) {
-					for (i = 0; i < localFiles.length; i++) {
-						Path localFile = localFiles[i];
-						if(localFile.toString().endsWith("program.so")) {
-							libPath = localFile.toString();
+			int[] a = new int[size * size];
+			int[] b = new int[size * size];
+			int[] c = new int[size * size];
+
+			for(i = 0; tokenizer.hasMoreTokens(); i++) {
+				num = Integer.parseInt(tokenizer.nextToken());
+				a[i] = num;
+				b[i] = num;
+				c[i] = 0;
+			}
+
+			// CPU Exec
+			if(GPU_FLAG == false){
+				System.out.println("***MapTask(CPU): " + context.getTaskAttemptID().getTaskID()  + " ***");
+				System.out.println("***line(" + size + "): ");
+
+				for(i = 0; i < size; i++){
+					for(j = 0; j < size; j++){
+						c[i * size + j] = 0;
+						for(k = 0; k < size; k++){
+							c[i * size + j] += a[i * size + k] * b[j + size * k];
 						}
 					}
 				}
 			}
-			else {
-				System.out.println("***localFiles was null!");
-				return;
+
+			// GPU Exec
+			else if(GPU_FLAG == true) {
+				System.out.println("***MapTask(GPU): " + context.getTaskAttemptID().getTaskID() + " ***");
+				System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				System.out.println("***line(" + size + "): ");
+
+				//Load Shared Library
+				localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
+
+				String libPath = "";
+				if (null != localFiles) {
+					if (localFiles.length > 0) {
+						for (i = 0; i < localFiles.length; i++) {
+							Path localFile = localFiles[i];
+							if (localFile.toString().endsWith("program.so")) {
+								libPath = localFile.toString();
+							}
+						}
+					}
+				} else {
+					System.out.println("***localFiles was null!");
+					return;
+				}
+
+				System.setProperty("java.library.path", libPath);
+
+				//Call CUDA
+				CudaWrapper m = new CudaWrapper(libPath);
+
+				// call the native method, which in turn will execute kernel code on the device
+				System.out.println("J:calling C.");
+				int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
+				System.out.println("J: retVal = \nJ:c[]= " + retVal);
 			}
-
-			System.setProperty("java.library.path", libPath);
-
-			//Call CUDA
-			CudaWrapper m = new CudaWrapper(libPath);
-
-			size = Integer.parseInt(tokenizer.nextToken());
-
-			float[] a = new float[size * size];
-			float[] b = new float[size * size];
-			float[] c = new float[size * size];
-
-			System.out.println("***line(" + size + "): ");
-			for(i = 0; tokenizer.hasMoreTokens(); i++) {
-				num = Float.parseFloat(tokenizer.nextToken());
-				a[i] = num;
-				b[i] = num;
-				//System.out.println(num);
-			}
-
-			// initialize two arrays
-//			for (i = 0; i < SIZE; i++){
-//				for(j = 0; j < SIZE; j++){
-//					a[i * SIZE + j] = i;
-//					b[i * SIZE + j] = i;
-//				}
-//			}
-			System.out.println("J: Arrays initialized, calling C. Size = " + a.length);
-			
-			// call the native method, which in turn will execute kernel code on the device
-			System.out.println("J:calling C.");
-			int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
-			System.out.println("J: retVal = \nJ:c[]= " + retVal);
-
-			// print the results
-//			for (int i = 0; i < retVal; i++)
-//				System.out.print("J: " + c[i] + "| ");
-//			System.out.println();
 
 			word.set(Arrays.toString(c));
 			context.write(word, ONE);
 		}
 	}
 
-
 	public static class MyReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
-
 		@Override
 		public void reduce(final Text key, final Iterable<IntWritable> values, final Context context)
 		throws IOException, InterruptedException {
@@ -138,8 +140,26 @@ public class MatrixCalc extends Configured implements Tool {
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
+		job.setNumReduceTasks(0);
+
+		if (args.length < 3) {
+			System.err.println("Usage: matrixMul <in> <out> <CPU/GPU>");
+			System.exit(2);
+		}
+
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+		if(args[2].equals("CPU")){
+			GPU_FLAG = false;
+		}
+		else if(args[2].equals("GPU")){
+			GPU_FLAG = true;
+		}
+		else{
+			System.err.println("ERROR: <CPU/GPU>");
+			System.exit(2);
+		}
 
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);

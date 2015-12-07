@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     com_example_jni_CudaWrapper
  * Method:    CUDAProxy_matrixMul
- * Signature: ([F[F[FII)I
+ * Signature: ([I[I[III)I
  */
 JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul
-  (JNIEnv *, jobject, jfloatArray, jfloatArray, jfloatArray, jint, jint);
+  (JNIEnv *, jobject, jintArray, jintArray, jintArray, jint, jint);
 
 #ifdef __cplusplus
 }
