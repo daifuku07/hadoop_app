@@ -26,6 +26,7 @@ extern "C" {
 		size_t size = N * N * sizeof (int);
 
 		printf("C: device id >> %d\n", device_id);
+		cudaSetDevice(device_id);
 
 		// allocate memory in the GPU device for a, b and c
 		cudaMalloc((void **) & a_d, size);
