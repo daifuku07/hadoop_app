@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <jni.h>
 
+//#define BLOCK_SIZE 128
 #define BLOCK_SIZE 384
 
 //#define DEBUG
@@ -13,9 +14,9 @@ extern "C" {
 		int init_flag = 0;
 		int finish_flag = 0;
 
-    int col = blockIdx.x * blockDim.x + threadIdx.x;
+		int col = blockIdx.x * blockDim.x + threadIdx.x;
 
-    count[col] = 0;
+		count[col] = 0;
 
 		int startpoint = col * offset;
 		int endpoint = col * offset + offset;
@@ -52,7 +53,7 @@ extern "C" {
 		char *words_h = (char *)words;
 		int *count_d;
 		int *count;
-		count = (int *)malloc(BLOCK_SIZE);
+		count = (int *)malloc(sizeof(int) * BLOCK_SIZE);
 		int word_num = strlen(words_h);
 		size_t words_size = word_num * sizeof(char);
 
@@ -65,12 +66,12 @@ extern "C" {
 		for(i = 0; i < BLOCK_SIZE; i++){
 			printf("Input words(%d): \n", i);
 			for(k = 0; k < word_num/BLOCK_SIZE; k++){
-						printf("%c", words[(word_num/BLOCK_SIZE) * i + k]);
+				printf("%c", words[(word_num/BLOCK_SIZE) * i + k]);
 			}
 			printf("\n");
 		}
 		printf("End words: ");
- #endif
+#endif
 
 		printf("C: device id >> %d\n", device_id);
 		cudaSetDevice(device_id);
@@ -78,33 +79,33 @@ extern "C" {
 		printf("C: matching_word = %s\n", matching_word);
 
 		// allocate memory in the GPU device
-    err = cudaMalloc((void **) &words_d, words_size);
-    if (err != cudaSuccess){
-    	printf("CUDA error: %s\n", cudaGetErrorString(err));
-    	exit(-1);
-    }
-    err = cudaMalloc((void **) &matching_word_d, strlen(matching_word)*sizeof(char));
-    if (err != cudaSuccess){
-    	printf("CUDA error: %s\n", cudaGetErrorString(err));
-    	exit(-1);
-    }
+		err = cudaMalloc((void **) &words_d, words_size);
+		if (err != cudaSuccess){
+			printf("CUDA error: %s\n", cudaGetErrorString(err));
+			exit(-1);
+		}
+		err = cudaMalloc((void **) &matching_word_d, strlen(matching_word)*sizeof(char));
+		if (err != cudaSuccess){
+			printf("CUDA error: %s\n", cudaGetErrorString(err));
+			exit(-1);
+		}
 		err = cudaMalloc((void **) &count_d, BLOCK_SIZE*sizeof(int));
-    if (err != cudaSuccess){
-    	printf("CUDA error: %s\n", cudaGetErrorString(err));
-    	exit(-1);
-    }
+		if (err != cudaSuccess){
+			printf("CUDA error: %s\n", cudaGetErrorString(err));
+			exit(-1);
+		}
 
 		// copy from host to GPU device
 		err = cudaMemcpy(words_d, words, words_size, cudaMemcpyHostToDevice);
 		if (err != cudaSuccess){
 			printf("CUDA error: %s\n", cudaGetErrorString(err));
-      exit(-1);
-    }
-    err = cudaMemcpy(matching_word_d, matching_word, strlen(matching_word)*sizeof(char), cudaMemcpyHostToDevice);
-    if (err != cudaSuccess){
-    	printf("CUDA error: %s\n", cudaGetErrorString(err));
-      exit(-1);
-     }
+			exit(-1);
+		}
+		err = cudaMemcpy(matching_word_d, matching_word, strlen(matching_word)*sizeof(char), cudaMemcpyHostToDevice);
+		if (err != cudaSuccess){
+			printf("CUDA error: %s\n", cudaGetErrorString(err));
+			exit(-1);
+		}
 
 		// do calculations on device
 		//dim3 block(BLOCK_SIZE, 1);
@@ -112,22 +113,33 @@ extern "C" {
 
 		// Launch GPU
 		string_match<<<1, BLOCK_SIZE>>>(words_d, matching_word_d, count_d, word_num, strlen(matching_word), BLOCK_SIZE);
+		cudaDeviceSynchronize();
 
 		cudaMemcpy(count, count_d, BLOCK_SIZE*sizeof(int), cudaMemcpyDeviceToHost);
-
-		cudaFree(words_d);
-		cudaFree(matching_word_d);
-		cudaFree(count_d);
+		cudaDeviceSynchronize();
 
 		int ans_count = 0;
 
 		//printf("Output count: ");
-    for(i = 0; i < BLOCK_SIZE; i++){
-    	ans_count += count[i];
-    	//printf("%d, ", count[i]);
-    }
-    //printf("End Output: ans_count = %d\n", ans_count);
+		
+		for(i = 0; i < BLOCK_SIZE; i++){
+			if(count[i] != NULL){
+				ans_count += count[i];
+			}
+			else{
+			printf("NULL: %d \n", i);
+			}
+			//printf("%d, ", count[i]);
+		}
+		
+		//printf("End Output: ans_count = %d\n", ans_count);
+		
+		free(count);
 
+		cudaFree(words_d);
+		cudaFree(matching_word_d);
+		cudaFree(count_d);
+		
 		return ans_count;
 	}
 }
