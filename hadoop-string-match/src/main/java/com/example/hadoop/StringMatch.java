@@ -60,8 +60,8 @@ public class StringMatch extends Configured implements Tool {
 			// GPU Exec
 			else if(context.getConfiguration().getBoolean("GPU_FLAG", defaultRunFlag) == true) {
 				System.out.println("***MapTask(GPU): " + context.getTaskAttemptID().getTaskID() + " ***");
-				System.out.println("***GPU Device >> " + context.getGpuDeviceID());
-				//System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
+				//System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
 
 				//Load Shared Library
 				localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
@@ -86,7 +86,9 @@ public class StringMatch extends Configured implements Tool {
 				CudaWrapper m = new CudaWrapper(libPath);
 
 				// call the native method, which in turn will execute kernel code on the device
-				int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getGpuDeviceID());
+				//int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getGpuDeviceID());
+				//int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getTaskAttemptID().getTaskID().getId()%2);
+				int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, 0);
 				System.out.println("***Count >> " + count);
 				context.write(word, new IntWritable(count));
 			}

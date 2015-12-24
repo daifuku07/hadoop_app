@@ -26,12 +26,11 @@ import java.util.StringTokenizer;
 
 public class MatrixCalc extends Configured implements Tool {
 
-	private static boolean GPU_FLAG = true;
-
 	public static class MyMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 		private static final IntWritable ONE = new IntWritable(1);
 		private final transient Text word = new Text();
 		private Path[] localFiles;
+		private boolean defaultRunFlag = true;
 
 		@Override
 		public void map(final LongWritable key, final Text value, final Context context)
@@ -56,8 +55,8 @@ public class MatrixCalc extends Configured implements Tool {
 			}
 
 			// CPU Exec
-			if(GPU_FLAG == false){
-				System.out.println("***MapTask(CPU): " + context.getTaskAttemptID().getTaskID()  + " ***");
+			if(context.getConfiguration().getBoolean("GPU_FLAG", defaultRunFlag) == false){
+				System.out.println("***MapTask(CPU): " + context.getTaskAttemptID().getTaskID() + " ***");
 				System.out.println("***line(" + size + "): ");
 
 				for(i = 0; i < size; i++){
@@ -71,9 +70,10 @@ public class MatrixCalc extends Configured implements Tool {
 			}
 
 			// GPU Exec
-			else if(GPU_FLAG == true) {
+			else if(context.getConfiguration().getBoolean("GPU_FLAG", defaultRunFlag) == true) {
 				System.out.println("***MapTask(GPU): " + context.getTaskAttemptID().getTaskID() + " ***");
-				System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				//System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
 				System.out.println("***line(" + size + "): ");
 
 				//Load Shared Library
@@ -94,6 +94,7 @@ public class MatrixCalc extends Configured implements Tool {
 					return;
 				}
 
+				System.out.println("J:java.library.path = " + libPath);
 				System.setProperty("java.library.path", libPath);
 
 				//Call CUDA
@@ -101,9 +102,12 @@ public class MatrixCalc extends Configured implements Tool {
 
 				// call the native method, which in turn will execute kernel code on the device
 				System.out.println("J:calling C.");
-				int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
+				int retVal = m.CUDAProxy_matrixMul(a, b, c, size, 1);
+				//int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
+				//int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getTaskAttemptID().getTaskID().getId()%2);
 				System.out.println("J: retVal = \nJ:c[]= " + retVal);
 			}
+			
 
 			word.set(Arrays.toString(c));
 			context.write(word, ONE);
@@ -116,7 +120,7 @@ public class MatrixCalc extends Configured implements Tool {
 		throws IOException, InterruptedException {
 		int sum = 0;
 		System.out.println("***reduce");
-		System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+//		System.out.println("***GPU Device >> " + context.getGpuDeviceID());
 
 		for (final IntWritable val : values) {
 			System.out.println("***reduce calc");
@@ -129,6 +133,8 @@ public class MatrixCalc extends Configured implements Tool {
 	@Override public int run(final String[] args) throws Exception {
 		final Configuration conf = this.getConf();
 		final Job job = Job.getInstance(conf, "Matrix Calculation");
+		boolean gpuFlag = false;
+
 		job.setJarByClass(MatrixCalc.class);
 
 		job.setMapperClass(MyMapper.class);
@@ -151,19 +157,24 @@ public class MatrixCalc extends Configured implements Tool {
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 		if(args[2].equals("CPU")){
-			GPU_FLAG = false;
+			gpuFlag = false;
+			System.out.println("***Choose CPU Mode");
 		}
 		else if(args[2].equals("GPU")){
-			GPU_FLAG = true;
+			gpuFlag = true;
+			System.out.println("***Choose GPU Mode");
 		}
 		else{
 			System.err.println("ERROR: <CPU/GPU>");
 			System.exit(2);
 		}
+		// Set GPU FLAG
+		conf.setBoolean("GPU_FLAG", gpuFlag);
 
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);
 
+		System.out.println("J:java.library.path = " + new Path("/user/gpu/native/program.so").toUri());
 		DistributedCache.addCacheFile(new Path("/user/gpu/native/program.so").toUri(), job.getConfiguration());
 		//DistributedCache.addCacheFile(new Path("/home/gpu/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
 
