@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul
   (JNIEnv *, jobject, jintArray, jintArray, jintArray, jint, jint);
 
+/*
+ * Class:     com_example_jni_CudaWrapper
+ * Method:    CUDAProxy_memoryAllocate
+ * Signature: (II)I
+ */
+JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1memoryAllocate
+  (JNIEnv *, jobject, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif

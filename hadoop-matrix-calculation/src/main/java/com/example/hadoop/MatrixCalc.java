@@ -174,9 +174,9 @@ public class MatrixCalc extends Configured implements Tool {
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);
 
-		System.out.println("J:java.library.path = " + new Path("/user/gpu/native/program.so").toUri());
-		DistributedCache.addCacheFile(new Path("/user/gpu/native/program.so").toUri(), job.getConfiguration());
-		//DistributedCache.addCacheFile(new Path("/home/gpu/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
+		System.out.println("J:java.library.path = " + new Path("/user/master/native/program.so").toUri());
+		DistributedCache.addCacheFile(new Path("/user/master/native/program.so").toUri(), job.getConfiguration());
+		//DistributedCache.addCacheFile(new Path("/home/master/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
 
 		return job.waitForCompletion(true) ? 0 : 1;
 	}

@@ -157,7 +157,7 @@ public class StringMatch extends Configured implements Tool {
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);
 
-		DistributedCache.addCacheFile(new Path("/user/gpu/native/program.so").toUri(), job.getConfiguration());
+		DistributedCache.addCacheFile(new Path("/user/master/native/program.so").toUri(), job.getConfiguration());
 		//DistributedCache.addCacheFile(new Path("/home/gpu/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
 
 		return job.waitForCompletion(true) ? 0 : 1;

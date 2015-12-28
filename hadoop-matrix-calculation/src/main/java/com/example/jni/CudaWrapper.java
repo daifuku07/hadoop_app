@@ -8,4 +8,6 @@ public class CudaWrapper {
   }
 
   public native int CUDAProxy_matrixMul(int[] a, int[] b, int[] c, int n, int device_id);
+
+  public native int CUDAProxy_memoryAllocate(int size, int device_id);
 }

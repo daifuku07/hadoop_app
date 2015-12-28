@@ -26,3 +26,10 @@ JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1matrixMul(JNI
 
 	return (jint) N; // this might not be the right way to return values to Java
 }
+
+JNIEXPORT jint JNICALL Java_com_example_jni_CudaWrapper_CUDAProxy_1memoryAllocate(JNIEnv *env, jobject obj, jint size, jint device_id)
+{
+    cuda_testMemoryAllocate(size, device_id);
+
+    return (jint)0;
+}
