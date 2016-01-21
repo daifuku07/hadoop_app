@@ -72,8 +72,8 @@ public class MatrixCalc extends Configured implements Tool {
 			// GPU Exec
 			else if(context.getConfiguration().getBoolean("GPU_FLAG", defaultRunFlag) == true) {
 				System.out.println("***MapTask(GPU): " + context.getTaskAttemptID().getTaskID() + " ***");
-				//System.out.println("***GPU Device >> " + context.getGpuDeviceID());
-				System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
+				System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				//System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
 				System.out.println("***line(" + size + "): ");
 
 				//Load Shared Library
@@ -102,8 +102,8 @@ public class MatrixCalc extends Configured implements Tool {
 
 				// call the native method, which in turn will execute kernel code on the device
 				System.out.println("J:calling C.");
-				int retVal = m.CUDAProxy_matrixMul(a, b, c, size, 1);
-				//int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
+				//int retVal = m.CUDAProxy_matrixMul(a, b, c, size, 1);
+				int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getGpuDeviceID());
 				//int retVal = m.CUDAProxy_matrixMul(a, b, c, size, context.getTaskAttemptID().getTaskID().getId()%2);
 				System.out.println("J: retVal = \nJ:c[]= " + retVal);
 			}
@@ -174,8 +174,8 @@ public class MatrixCalc extends Configured implements Tool {
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);
 
-		System.out.println("J:java.library.path = " + new Path("/user/master/native/program.so").toUri());
-		DistributedCache.addCacheFile(new Path("/user/master/native/program.so").toUri(), job.getConfiguration());
+		System.out.println("J:java.library.path = " + new Path("/user/master/matrix_native/program.so").toUri());
+		DistributedCache.addCacheFile(new Path("/user/master/matrix_native/program.so").toUri(), job.getConfiguration());
 		//DistributedCache.addCacheFile(new Path("/home/master/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
 
 		return job.waitForCompletion(true) ? 0 : 1;

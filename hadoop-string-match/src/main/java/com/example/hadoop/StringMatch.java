@@ -60,8 +60,8 @@ public class StringMatch extends Configured implements Tool {
 			// GPU Exec
 			else if(context.getConfiguration().getBoolean("GPU_FLAG", defaultRunFlag) == true) {
 				System.out.println("***MapTask(GPU): " + context.getTaskAttemptID().getTaskID() + " ***");
-				//System.out.println("***GPU Device >> " + context.getGpuDeviceID());
-				System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
+				System.out.println("***GPU Device >> " + context.getGpuDeviceID());
+				//System.out.println("***GPU Device >> " + context.getTaskAttemptID().getTaskID().getId()%2);
 
 				//Load Shared Library
 				localFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
@@ -86,9 +86,9 @@ public class StringMatch extends Configured implements Tool {
 				CudaWrapper m = new CudaWrapper(libPath);
 
 				// call the native method, which in turn will execute kernel code on the device
-				//int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getGpuDeviceID());
+				int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getGpuDeviceID());
 				//int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, context.getTaskAttemptID().getTaskID().getId()%2);
-				int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, 0);
+				//int count = m.CUDAProxy_stringMatch(bytes, MATCHINGWORD, 1);
 				System.out.println("***Count >> " + count);
 				context.write(word, new IntWritable(count));
 			}
@@ -157,7 +157,7 @@ public class StringMatch extends Configured implements Tool {
 		//Load CUDA shared Library
 		FileSystem fs = FileSystem.get(conf);
 
-		DistributedCache.addCacheFile(new Path("/user/master/native/program.so").toUri(), job.getConfiguration());
+		DistributedCache.addCacheFile(new Path("/user/master/string_native/program.so").toUri(), job.getConfiguration());
 		//DistributedCache.addCacheFile(new Path("/home/gpu/workspace/hadoop_app/WordCount/src/jni/program.so").toUri(), job.getConfiguration());
 
 		return job.waitForCompletion(true) ? 0 : 1;

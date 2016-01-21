@@ -5,7 +5,6 @@
 #define BLOCK_SIZE 32
 
 extern "C" {
-
 	__global__ void mul_matrix(int *A, int *B, int *C, int n){
 		unsigned int i;
 		int product = 0;
@@ -25,11 +24,11 @@ extern "C" {
 	int cuda_matrixMul(int *a_h, int *b_h, int *c_h, int N, int device_id){
 		cudaError_t err;
 		int *a_d, *b_d, *c_d;
-		//size_t size = N * N * sizeof (int);
+		size_t size = N * N * sizeof (int);
 		// Test 300MB
 		//size_t size = 314572800;
 		// Test 156MB
-		size_t size = 163577856;
+		//size_t size = 163577856;
 
 		printf("C: device id >> %d\n", device_id);
 		cudaSetDevice(device_id);
@@ -54,7 +53,7 @@ extern "C" {
         	exit(-1);
         }
 
-		size = N * N * sizeof (int);
+		//size = N * N * sizeof (int);
 
 		// copy from host to GPU device
 		printf("C: Memory Copy1\n");
@@ -69,7 +68,6 @@ extern "C" {
                 	printf("CUDA error(5): %s\n", cudaGetErrorString(err));
                 	exit(-1);
     }
-
 
 		// do calculations on device
 		dim3 block(BLOCK_SIZE, BLOCK_SIZE);

@@ -1,0 +1,1429 @@
+16/01/14 00:23:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `native': No such file or directory
+16/01/14 00:23:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `input': No such file or directory
+16/01/14 00:23:06 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `output': No such file or directory
+16/01/14 00:23:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:23:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:23:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:23:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:23:13 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:23:14 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:23:14 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:23:14 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:23:14 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0001
+16/01/14 00:23:14 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0001
+16/01/14 00:23:14 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0001/
+16/01/14 00:23:14 INFO mapreduce.Job: Running job: job_1452698544395_0001
+16/01/14 00:23:19 INFO mapreduce.Job: Job job_1452698544395_0001 running in uber mode : false
+16/01/14 00:23:19 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:23:27 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:23:28 INFO mapreduce.Job: Task Id : attempt_1452698544395_0001_m_000005_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0001_01_000007
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:23:28 INFO mapreduce.Job: Task Id : attempt_1452698544395_0001_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0001_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:23:29 INFO mapreduce.Job:  map 8% reduce 0%
+16/01/14 00:23:30 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:23:37 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:23:38 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:23:39 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:23:42 INFO mapreduce.Job:  map 32% reduce 0%
+16/01/14 00:23:44 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:23:45 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:23:46 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:23:47 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:23:48 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:23:52 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:23:53 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:23:54 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:23:55 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:23:56 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:23:59 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:24:00 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:24:01 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:24:02 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:24:03 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:24:06 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:24:07 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:24:08 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:24:09 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:24:09 INFO mapreduce.Job: Job job_1452698544395_0001 completed successfully
+16/01/14 00:24:09 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=2
+		Launched map tasks=42
+		Other local map tasks=2
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2217808
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=277226
+		Total vcore-seconds taken by all map tasks=277226
+		Total megabyte-seconds taken by all map tasks=283879424
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1945
+		CPU time spent (ms)=107580
+		Physical memory (bytes) snapshot=28908535808
+		Virtual memory (bytes) snapshot=1276386455552
+		Total committed heap usage (bytes)=30826037248
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:24:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:10 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:24:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:11 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:24:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:12 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:24:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:17 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:24:19 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:24:19 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:24:19 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:24:19 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:24:19 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:24:20 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0002
+16/01/14 00:24:20 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0002
+16/01/14 00:24:20 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0002/
+16/01/14 00:24:20 INFO mapreduce.Job: Running job: job_1452698544395_0002
+16/01/14 00:24:24 INFO mapreduce.Job: Job job_1452698544395_0002 running in uber mode : false
+16/01/14 00:24:24 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:24:32 INFO mapreduce.Job: Task Id : attempt_1452698544395_0002_m_000002_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0002_01_000004
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:24:32 INFO mapreduce.Job: Task Id : attempt_1452698544395_0002_m_000001_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0002_01_000003
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:24:32 INFO mapreduce.Job: Task Id : attempt_1452698544395_0002_m_000006_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0002_01_000008
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:24:34 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:24:35 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:24:39 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:24:41 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:24:42 INFO mapreduce.Job:  map 22% reduce 0%
+16/01/14 00:24:43 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:24:45 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:24:46 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:24:48 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:24:49 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:24:50 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:24:52 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:24:53 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:24:54 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:24:56 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:24:57 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:24:59 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:25:00 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:25:01 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:25:02 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:25:04 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:25:06 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:25:07 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:25:08 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:25:09 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:25:10 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:25:12 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:25:13 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:25:13 INFO mapreduce.Job: Job job_1452698544395_0002 completed successfully
+16/01/14 00:25:13 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=3
+		Launched map tasks=43
+		Other local map tasks=3
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2116280
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=264535
+		Total vcore-seconds taken by all map tasks=264535
+		Total megabyte-seconds taken by all map tasks=270883840
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2391
+		CPU time spent (ms)=97340
+		Physical memory (bytes) snapshot=28898668544
+		Virtual memory (bytes) snapshot=1276351172608
+		Total committed heap usage (bytes)=30426529792
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:25:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:15 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:25:15 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:16 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:25:17 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:17 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:25:18 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:25:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:25:23 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:25:24 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:25:24 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:25:24 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:25:24 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0003
+16/01/14 00:25:24 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0003
+16/01/14 00:25:24 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0003/
+16/01/14 00:25:24 INFO mapreduce.Job: Running job: job_1452698544395_0003
+16/01/14 00:25:29 INFO mapreduce.Job: Job job_1452698544395_0003 running in uber mode : false
+16/01/14 00:25:29 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:25:37 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:25:37 INFO mapreduce.Job: Task Id : attempt_1452698544395_0003_m_000001_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0003_01_000003
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:25:37 INFO mapreduce.Job: Task Id : attempt_1452698544395_0003_m_000005_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0003_01_000007
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:25:39 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/14 00:25:40 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:25:43 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:25:44 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:25:47 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:25:48 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:25:49 INFO mapreduce.Job:  map 32% reduce 0%
+16/01/14 00:25:50 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/14 00:25:51 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:25:53 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:25:55 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:25:56 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:25:57 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:25:58 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:26:00 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:26:02 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:26:03 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:26:05 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:26:06 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:26:08 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:26:09 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:26:10 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:26:11 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:26:12 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:26:13 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:26:15 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:26:16 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:26:17 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:26:17 INFO mapreduce.Job: Job job_1452698544395_0003 completed successfully
+16/01/14 00:26:17 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=2
+		Launched map tasks=42
+		Other local map tasks=2
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2070960
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=258870
+		Total vcore-seconds taken by all map tasks=258870
+		Total megabyte-seconds taken by all map tasks=265082880
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1839
+		CPU time spent (ms)=97330
+		Physical memory (bytes) snapshot=28950605824
+		Virtual memory (bytes) snapshot=1276441554944
+		Total committed heap usage (bytes)=30690246656
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:26:17 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:18 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:26:19 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:19 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:26:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:20 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:26:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:26:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:26:27 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:26:27 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:26:28 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:26:28 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:26:28 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0004
+16/01/14 00:26:28 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0004
+16/01/14 00:26:28 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0004/
+16/01/14 00:26:28 INFO mapreduce.Job: Running job: job_1452698544395_0004
+16/01/14 00:26:32 INFO mapreduce.Job: Job job_1452698544395_0004 running in uber mode : false
+16/01/14 00:26:32 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:26:40 INFO mapreduce.Job: Task Id : attempt_1452698544395_0004_m_000000_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0004_01_000002
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:26:40 INFO mapreduce.Job: Task Id : attempt_1452698544395_0004_m_000001_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0004_01_000003
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:26:40 INFO mapreduce.Job: Task Id : attempt_1452698544395_0004_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0004_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:26:42 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:26:43 INFO mapreduce.Job:  map 8% reduce 0%
+16/01/14 00:26:44 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:26:47 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:26:49 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:26:50 INFO mapreduce.Job:  map 22% reduce 0%
+16/01/14 00:26:51 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:26:53 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:26:55 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/14 00:26:56 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:26:57 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:26:58 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:27:00 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:27:01 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:27:02 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:27:03 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:27:05 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:27:06 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:27:07 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:27:08 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:27:09 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:27:10 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:27:11 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:27:13 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:27:14 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:27:16 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:27:17 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:27:18 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:27:19 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:27:20 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:27:21 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:27:21 INFO mapreduce.Job: Job job_1452698544395_0004 completed successfully
+16/01/14 00:27:21 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=3
+		Launched map tasks=43
+		Other local map tasks=3
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2105008
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=263126
+		Total vcore-seconds taken by all map tasks=263126
+		Total megabyte-seconds taken by all map tasks=269441024
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2020
+		CPU time spent (ms)=97330
+		Physical memory (bytes) snapshot=29014220800
+		Virtual memory (bytes) snapshot=1276380987392
+		Total committed heap usage (bytes)=30892621824
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:27:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:23 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:27:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:24 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:27:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:25 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:27:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:27:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:27:31 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:27:31 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:27:31 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:27:31 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:27:32 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0005
+16/01/14 00:27:32 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0005
+16/01/14 00:27:32 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0005/
+16/01/14 00:27:32 INFO mapreduce.Job: Running job: job_1452698544395_0005
+16/01/14 00:27:37 INFO mapreduce.Job: Job job_1452698544395_0005 running in uber mode : false
+16/01/14 00:27:37 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:27:45 INFO mapreduce.Job: Task Id : attempt_1452698544395_0005_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0005_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:27:45 INFO mapreduce.Job: Task Id : attempt_1452698544395_0005_m_000003_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0005_01_000005
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:27:46 INFO mapreduce.Job: Task Id : attempt_1452698544395_0005_m_000005_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0005_01_000007
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:27:47 INFO mapreduce.Job:  map 8% reduce 0%
+16/01/14 00:27:48 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:27:52 INFO mapreduce.Job:  map 15% reduce 0%
+16/01/14 00:27:53 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:27:55 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:27:58 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:28:00 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/14 00:28:01 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:28:02 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:28:03 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:28:05 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:28:06 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:28:07 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:28:09 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:28:10 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:28:12 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:28:13 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:28:14 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:28:15 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:28:17 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:28:18 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:28:19 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:28:20 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:28:21 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:28:22 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:28:23 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:28:24 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:28:25 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:28:25 INFO mapreduce.Job: Job job_1452698544395_0005 completed successfully
+16/01/14 00:28:25 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=3
+		Launched map tasks=43
+		Other local map tasks=3
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2183232
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=272904
+		Total vcore-seconds taken by all map tasks=272904
+		Total megabyte-seconds taken by all map tasks=279453696
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2053
+		CPU time spent (ms)=98830
+		Physical memory (bytes) snapshot=28927713280
+		Virtual memory (bytes) snapshot=1276410380288
+		Total committed heap usage (bytes)=30692868096
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:28:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:27 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:28:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:28 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:28:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:29 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:28:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:28:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:28:35 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:28:36 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:28:36 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:28:36 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:28:36 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0006
+16/01/14 00:28:36 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0006
+16/01/14 00:28:36 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0006/
+16/01/14 00:28:36 INFO mapreduce.Job: Running job: job_1452698544395_0006
+16/01/14 00:28:41 INFO mapreduce.Job: Job job_1452698544395_0006 running in uber mode : false
+16/01/14 00:28:41 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:28:49 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:28:49 INFO mapreduce.Job: Task Id : attempt_1452698544395_0006_m_000000_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0006_01_000002
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:28:49 INFO mapreduce.Job: Task Id : attempt_1452698544395_0006_m_000005_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0006_01_000007
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:28:49 INFO mapreduce.Job: Task Id : attempt_1452698544395_0006_m_000003_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0006_01_000005
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:28:50 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/14 00:28:51 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:28:55 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:28:56 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:28:58 INFO mapreduce.Job:  map 22% reduce 0%
+16/01/14 00:28:59 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:29:00 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:29:03 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:29:04 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:29:05 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:29:07 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:29:08 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:29:12 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:29:13 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:29:14 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:29:15 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:29:19 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:29:20 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:29:21 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:29:22 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:29:26 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:29:28 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:29:29 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:29:30 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:29:31 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:29:31 INFO mapreduce.Job: Job job_1452698544395_0006 completed successfully
+16/01/14 00:29:31 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=3
+		Launched map tasks=43
+		Other local map tasks=3
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2149552
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=268694
+		Total vcore-seconds taken by all map tasks=268694
+		Total megabyte-seconds taken by all map tasks=275142656
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1691
+		CPU time spent (ms)=104690
+		Physical memory (bytes) snapshot=28884148224
+		Virtual memory (bytes) snapshot=1276319141888
+		Total committed heap usage (bytes)=30692868096
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:29:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:29:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:29:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:34 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:29:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:29:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:29:40 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:29:41 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:29:41 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:29:41 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:29:41 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0007
+16/01/14 00:29:41 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0007
+16/01/14 00:29:41 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0007/
+16/01/14 00:29:41 INFO mapreduce.Job: Running job: job_1452698544395_0007
+16/01/14 00:29:45 INFO mapreduce.Job: Job job_1452698544395_0007 running in uber mode : false
+16/01/14 00:29:45 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:29:53 INFO mapreduce.Job: Task Id : attempt_1452698544395_0007_m_000001_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0007_01_000003
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:29:53 INFO mapreduce.Job: Task Id : attempt_1452698544395_0007_m_000003_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0007_01_000005
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:29:53 INFO mapreduce.Job: Task Id : attempt_1452698544395_0007_m_000000_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0007_01_000002
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:29:55 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/14 00:29:56 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:29:59 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:30:00 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:30:02 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:30:03 INFO mapreduce.Job:  map 22% reduce 0%
+16/01/14 00:30:04 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:30:07 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:30:08 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/14 00:30:09 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:30:10 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:30:12 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:30:15 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:30:16 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:30:17 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:30:18 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:30:19 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:30:23 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:30:23 INFO mapreduce.Job: Task Id : attempt_1452698544395_0007_m_000028_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0007_01_000033
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:30:24 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:30:25 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:30:26 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:30:29 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:30:31 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:30:33 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:30:34 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:30:36 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:30:37 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:30:37 INFO mapreduce.Job: Job job_1452698544395_0007 completed successfully
+16/01/14 00:30:37 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=4
+		Launched map tasks=44
+		Other local map tasks=4
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2223056
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=277882
+		Total vcore-seconds taken by all map tasks=277882
+		Total megabyte-seconds taken by all map tasks=284551168
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1712
+		CPU time spent (ms)=108300
+		Physical memory (bytes) snapshot=28886347776
+		Virtual memory (bytes) snapshot=1276357890048
+		Total committed heap usage (bytes)=30493114368
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:30:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:38 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:30:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:39 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:30:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:40 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:30:41 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:30:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:30:46 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:30:47 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:30:47 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:30:47 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:30:47 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0008
+16/01/14 00:30:47 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0008
+16/01/14 00:30:47 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0008/
+16/01/14 00:30:47 INFO mapreduce.Job: Running job: job_1452698544395_0008
+16/01/14 00:30:52 INFO mapreduce.Job: Job job_1452698544395_0008 running in uber mode : false
+16/01/14 00:30:52 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:31:00 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:31:00 INFO mapreduce.Job: Task Id : attempt_1452698544395_0008_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0008_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:31:00 INFO mapreduce.Job: Task Id : attempt_1452698544395_0008_m_000006_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0008_01_000008
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:31:02 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:31:03 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:31:06 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:31:07 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:31:09 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/14 00:31:10 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:31:13 INFO mapreduce.Job:  map 32% reduce 0%
+16/01/14 00:31:14 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/14 00:31:15 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:31:16 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:31:18 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:31:20 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:31:21 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:31:23 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:31:24 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:31:25 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:31:26 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:31:27 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:31:28 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:31:29 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:31:30 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:31:31 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:31:32 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:31:33 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:31:34 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:31:35 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:31:36 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:31:37 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:31:38 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:31:39 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:31:40 INFO mapreduce.Job: Job job_1452698544395_0008 completed successfully
+16/01/14 00:31:40 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=2
+		Launched map tasks=42
+		Other local map tasks=2
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2052792
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=256599
+		Total vcore-seconds taken by all map tasks=256599
+		Total megabyte-seconds taken by all map tasks=262757376
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2015
+		CPU time spent (ms)=93050
+		Physical memory (bytes) snapshot=28928708608
+		Virtual memory (bytes) snapshot=1276359684096
+		Total committed heap usage (bytes)=30892621824
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:31:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:41 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:31:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:42 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:31:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:43 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:31:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:31:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:31:49 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:31:50 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:31:50 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:31:50 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:31:50 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0009
+16/01/14 00:31:50 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0009
+16/01/14 00:31:50 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0009/
+16/01/14 00:31:50 INFO mapreduce.Job: Running job: job_1452698544395_0009
+16/01/14 00:31:54 INFO mapreduce.Job: Job job_1452698544395_0009 running in uber mode : false
+16/01/14 00:31:54 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:32:02 INFO mapreduce.Job:  map 3% reduce 0%
+16/01/14 00:32:02 INFO mapreduce.Job: Task Id : attempt_1452698544395_0009_m_000001_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0009_01_000003
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:32:02 INFO mapreduce.Job: Task Id : attempt_1452698544395_0009_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0009_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:32:03 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/14 00:32:04 INFO mapreduce.Job:  map 8% reduce 0%
+16/01/14 00:32:05 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:32:06 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:32:08 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:32:09 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:32:12 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:32:13 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:32:17 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:32:18 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:32:19 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:32:20 INFO mapreduce.Job:  map 47% reduce 0%
+16/01/14 00:32:23 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/14 00:32:24 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:32:25 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:32:27 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:32:28 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:32:29 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/14 00:32:31 INFO mapreduce.Job:  map 68% reduce 0%
+16/01/14 00:32:32 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/14 00:32:34 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:32:35 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:32:36 INFO mapreduce.Job:  map 82% reduce 0%
+16/01/14 00:32:38 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/14 00:32:39 INFO mapreduce.Job:  map 88% reduce 0%
+16/01/14 00:32:40 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:32:41 INFO mapreduce.Job:  map 93% reduce 0%
+16/01/14 00:32:43 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:32:43 INFO mapreduce.Job: Job job_1452698544395_0009 completed successfully
+16/01/14 00:32:43 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=2
+		Launched map tasks=42
+		Other local map tasks=2
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2115952
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=264494
+		Total vcore-seconds taken by all map tasks=264494
+		Total megabyte-seconds taken by all map tasks=270841856
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1914
+		CPU time spent (ms)=99940
+		Physical memory (bytes) snapshot=28965269504
+		Virtual memory (bytes) snapshot=1276321034240
+		Total committed heap usage (bytes)=30826037248
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
+16/01/14 00:32:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:44 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/14 00:32:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:45 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/14 00:32:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:46 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/14 00:32:47 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/14 00:32:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/14 00:32:52 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/14 00:32:53 INFO input.FileInputFormat: Total input paths to process : 40
+16/01/14 00:32:53 INFO mapreduce.JobSubmitter: number of splits:40
+16/01/14 00:32:53 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/14 00:32:53 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452698544395_0010
+16/01/14 00:32:53 INFO impl.YarnClientImpl: Submitted application application_1452698544395_0010
+16/01/14 00:32:53 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452698544395_0010/
+16/01/14 00:32:53 INFO mapreduce.Job: Running job: job_1452698544395_0010
+16/01/14 00:32:58 INFO mapreduce.Job: Job job_1452698544395_0010 running in uber mode : false
+16/01/14 00:32:58 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/14 00:33:06 INFO mapreduce.Job: Task Id : attempt_1452698544395_0010_m_000004_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0010_01_000006
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:33:06 INFO mapreduce.Job: Task Id : attempt_1452698544395_0010_m_000003_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0010_01_000005
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:33:06 INFO mapreduce.Job: Task Id : attempt_1452698544395_0010_m_000006_0, Status : FAILED
+Exception from container-launch.
+Container id: container_1452698544395_0010_01_000008
+Exit code: 255
+Stack trace: ExitCodeException exitCode=255: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 255
+
+16/01/14 00:33:08 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/14 00:33:11 INFO mapreduce.Job:  map 13% reduce 0%
+16/01/14 00:33:12 INFO mapreduce.Job:  map 17% reduce 0%
+16/01/14 00:33:15 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/14 00:33:16 INFO mapreduce.Job:  map 22% reduce 0%
+16/01/14 00:33:18 INFO mapreduce.Job:  map 28% reduce 0%
+16/01/14 00:33:19 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/14 00:33:21 INFO mapreduce.Job:  map 38% reduce 0%
+16/01/14 00:33:22 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/14 00:33:24 INFO mapreduce.Job:  map 43% reduce 0%
+16/01/14 00:33:25 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/14 00:33:28 INFO mapreduce.Job:  map 52% reduce 0%
+16/01/14 00:33:29 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/14 00:33:31 INFO mapreduce.Job:  map 57% reduce 0%
+16/01/14 00:33:32 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/14 00:33:33 INFO mapreduce.Job:  map 63% reduce 0%
+16/01/14 00:33:37 INFO mapreduce.Job:  map 73% reduce 0%
+16/01/14 00:33:38 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/14 00:33:39 INFO mapreduce.Job:  map 77% reduce 0%
+16/01/14 00:33:40 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/14 00:33:45 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/14 00:33:46 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/14 00:33:47 INFO mapreduce.Job:  map 98% reduce 0%
+16/01/14 00:33:49 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/14 00:33:49 INFO mapreduce.Job: Job job_1452698544395_0010 completed successfully
+16/01/14 00:33:49 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=4264430
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4510
+		HDFS: Number of bytes written=160
+		HDFS: Number of read operations=200
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=80
+	Job Counters 
+		Failed map tasks=3
+		Launched map tasks=43
+		Other local map tasks=3
+		Data-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=2185696
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=273212
+		Total vcore-seconds taken by all map tasks=273212
+		Total megabyte-seconds taken by all map tasks=279769088
+	Map-Reduce Framework
+		Map input records=40
+		Map output records=40
+		Input split bytes=4430
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2250
+		CPU time spent (ms)=106430
+		Physical memory (bytes) snapshot=28875091968
+		Virtual memory (bytes) snapshot=1276363120640
+		Total committed heap usage (bytes)=30293360640
+	File Input Format Counters 
+		Bytes Read=80
+	File Output Format Counters 
+		Bytes Written=160
