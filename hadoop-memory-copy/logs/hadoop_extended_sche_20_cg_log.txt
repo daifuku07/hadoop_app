@@ -1,0 +1,836 @@
+16/01/16 20:54:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `native': No such file or directory
+16/01/16 20:54:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `input': No such file or directory
+16/01/16 20:54:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `output': No such file or directory
+16/01/16 20:54:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `cpu_output': No such file or directory
+16/01/16 20:54:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `cpu_input': No such file or directory
+16/01/16 20:54:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:54:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:54:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:54:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:54:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:54:34 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:54:35 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:54:35 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:54:35 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:54:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0001
+16/01/16 20:54:35 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0001
+16/01/16 20:54:35 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0001/
+16/01/16 20:54:35 INFO mapreduce.Job: Running job: job_1452945231589_0001
+16/01/16 20:54:42 INFO mapreduce.Job: Job job_1452945231589_0001 running in uber mode : false
+16/01/16 20:54:42 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 20:54:52 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 20:54:53 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 20:54:59 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 20:55:01 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/16 20:55:02 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 20:55:06 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 20:55:09 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 20:55:10 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 20:55:12 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 20:55:16 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 20:55:18 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 20:55:20 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 20:55:23 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 20:55:25 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 20:55:26 INFO mapreduce.Job: Job job_1452945231589_0001 completed successfully
+16/01/16 20:55:26 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1109472
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=138684
+		GPU_MB_MILLIS_MAPS=71006208
+		Total vcore-seconds taken by all map tasks=138684
+		Total megabyte-seconds taken by all map tasks=142012416
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1023
+		CPU time spent (ms)=64730
+		Physical memory (bytes) snapshot=14478548992
+		Virtual memory (bytes) snapshot=638171103232
+		Total committed heap usage (bytes)=15479603200
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 20:55:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:27 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 20:55:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:28 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 20:55:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:30 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 20:55:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:31 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 20:55:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 20:55:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:55:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:55:40 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:55:41 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:55:41 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:55:41 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:55:41 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0003
+16/01/16 20:55:41 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0003
+16/01/16 20:55:41 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0003/
+16/01/16 20:55:41 INFO mapreduce.Job: Running job: job_1452945231589_0003
+16/01/16 20:55:46 INFO mapreduce.Job: Job job_1452945231589_0003 running in uber mode : false
+16/01/16 20:55:46 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 20:55:55 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 20:55:56 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/16 20:55:57 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 20:56:00 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 20:56:04 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 20:56:05 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 20:56:08 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 20:56:12 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 20:56:13 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 20:56:15 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 20:56:20 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/16 20:56:21 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 20:56:23 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 20:56:28 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 20:56:28 INFO mapreduce.Job: Job job_1452945231589_0003 completed successfully
+16/01/16 20:56:28 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1132616
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=141577
+		GPU_MB_MILLIS_MAPS=72487424
+		Total vcore-seconds taken by all map tasks=141577
+		Total megabyte-seconds taken by all map tasks=144974848
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=919
+		CPU time spent (ms)=71040
+		Physical memory (bytes) snapshot=14492172288
+		Virtual memory (bytes) snapshot=638204121088
+		Total committed heap usage (bytes)=15479603200
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 20:56:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 20:56:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 20:56:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:34 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 20:56:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:35 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 20:56:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:37 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 20:56:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:41 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:56:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:56:44 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:56:45 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:56:45 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:56:45 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:56:45 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0006
+16/01/16 20:56:45 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0006
+16/01/16 20:56:45 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0006/
+16/01/16 20:56:45 INFO mapreduce.Job: Running job: job_1452945231589_0006
+16/01/16 20:56:51 INFO mapreduce.Job: Job job_1452945231589_0006 running in uber mode : false
+16/01/16 20:56:51 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 20:57:00 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/16 20:57:01 INFO mapreduce.Job:  map 15% reduce 0%
+16/01/16 20:57:02 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 20:57:06 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 20:57:08 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 20:57:09 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 20:57:13 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 20:57:16 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 20:57:17 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 20:57:21 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 20:57:26 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 20:57:28 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 20:57:35 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 20:57:36 INFO mapreduce.Job: Job job_1452945231589_0006 completed successfully
+16/01/16 20:57:36 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1153648
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=144206
+		GPU_MB_MILLIS_MAPS=73833472
+		Total vcore-seconds taken by all map tasks=144206
+		Total megabyte-seconds taken by all map tasks=147666944
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=821
+		CPU time spent (ms)=74060
+		Physical memory (bytes) snapshot=14498394112
+		Virtual memory (bytes) snapshot=638151270400
+		Total committed heap usage (bytes)=15479603200
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 20:57:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:37 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 20:57:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:38 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 20:57:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:40 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 20:57:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:41 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 20:57:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:42 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 20:57:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:57:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:57:50 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:57:50 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:57:50 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:57:50 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:57:50 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0008
+16/01/16 20:57:51 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0008
+16/01/16 20:57:51 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0008/
+16/01/16 20:57:51 INFO mapreduce.Job: Running job: job_1452945231589_0008
+16/01/16 20:57:55 INFO mapreduce.Job: Job job_1452945231589_0008 running in uber mode : false
+16/01/16 20:57:55 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 20:58:05 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/16 20:58:06 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 20:58:13 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 20:58:14 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 20:58:15 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 20:58:20 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 20:58:23 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 20:58:27 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 20:58:30 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 20:58:32 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 20:58:33 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 20:58:37 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 20:58:38 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/16 20:58:39 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 20:58:39 INFO mapreduce.Job: Job job_1452945231589_0008 completed successfully
+16/01/16 20:58:39 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1134128
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=141766
+		GPU_MB_MILLIS_MAPS=72584192
+		Total vcore-seconds taken by all map tasks=141766
+		Total megabyte-seconds taken by all map tasks=145168384
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=778
+		CPU time spent (ms)=72590
+		Physical memory (bytes) snapshot=14447788032
+		Virtual memory (bytes) snapshot=638185172992
+		Total committed heap usage (bytes)=15279849472
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 20:58:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:40 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 20:58:41 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:42 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 20:58:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:43 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 20:58:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:44 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 20:58:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:45 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 20:58:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:58:53 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:58:53 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:58:54 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:58:54 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:58:54 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:58:54 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0010
+16/01/16 20:58:55 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0010
+16/01/16 20:58:55 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0010/
+16/01/16 20:58:55 INFO mapreduce.Job: Running job: job_1452945231589_0010
+16/01/16 20:59:00 INFO mapreduce.Job: Job job_1452945231589_0010 running in uber mode : false
+16/01/16 20:59:00 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 20:59:09 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 20:59:10 INFO mapreduce.Job:  map 10% reduce 0%
+16/01/16 20:59:11 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 20:59:16 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 20:59:18 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 20:59:19 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 20:59:23 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 20:59:27 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 20:59:28 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 20:59:30 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 20:59:33 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 20:59:35 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/16 20:59:36 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 20:59:38 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 20:59:40 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 20:59:42 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/16 20:59:43 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 20:59:43 INFO mapreduce.Job: Job job_1452945231589_0010 completed successfully
+16/01/16 20:59:43 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1092336
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=136542
+		GPU_MB_MILLIS_MAPS=69909504
+		Total vcore-seconds taken by all map tasks=136542
+		Total megabyte-seconds taken by all map tasks=139819008
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=867
+		CPU time spent (ms)=65570
+		Physical memory (bytes) snapshot=14484238336
+		Virtual memory (bytes) snapshot=638218252288
+		Total committed heap usage (bytes)=15479603200
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 20:59:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:44 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 20:59:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:45 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 20:59:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:47 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 20:59:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:48 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 20:59:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:49 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 20:59:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 20:59:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 20:59:57 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 20:59:57 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 20:59:57 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 20:59:57 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 20:59:58 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0012
+16/01/16 20:59:58 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0012
+16/01/16 20:59:58 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0012/
+16/01/16 20:59:58 INFO mapreduce.Job: Running job: job_1452945231589_0012
+16/01/16 21:00:03 INFO mapreduce.Job: Job job_1452945231589_0012 running in uber mode : false
+16/01/16 21:00:03 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 21:00:13 INFO mapreduce.Job:  map 15% reduce 0%
+16/01/16 21:00:14 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 21:00:21 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/16 21:00:22 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 21:00:27 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 21:00:29 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/16 21:00:30 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 21:00:33 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 21:00:35 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 21:00:36 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/16 21:00:38 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 21:00:41 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 21:00:42 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 21:00:43 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/16 21:00:45 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 21:00:45 INFO mapreduce.Job: Job job_1452945231589_0012 completed successfully
+16/01/16 21:00:45 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1080592
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=135074
+		GPU_MB_MILLIS_MAPS=69157888
+		Total vcore-seconds taken by all map tasks=135074
+		Total megabyte-seconds taken by all map tasks=138315776
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=993
+		CPU time spent (ms)=65290
+		Physical memory (bytes) snapshot=14482563072
+		Virtual memory (bytes) snapshot=638177865728
+		Total committed heap usage (bytes)=15346434048
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 21:00:47 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:47 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 21:00:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:48 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 21:00:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:49 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 21:00:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 21:00:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 21:00:53 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:58 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:00:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 21:01:00 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 21:01:00 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 21:01:00 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 21:01:00 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 21:01:00 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0014
+16/01/16 21:01:01 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0014
+16/01/16 21:01:01 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0014/
+16/01/16 21:01:01 INFO mapreduce.Job: Running job: job_1452945231589_0014
+16/01/16 21:01:05 INFO mapreduce.Job: Job job_1452945231589_0014 running in uber mode : false
+16/01/16 21:01:05 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 21:01:14 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 21:01:16 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 21:01:23 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 21:01:24 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 21:01:25 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 21:01:31 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 21:01:33 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 21:01:38 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 21:01:39 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 21:01:41 INFO mapreduce.Job:  map 75% reduce 0%
+16/01/16 21:01:42 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 21:01:44 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 21:01:46 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 21:01:48 INFO mapreduce.Job:  map 95% reduce 0%
+16/01/16 21:01:49 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 21:01:49 INFO mapreduce.Job: Job job_1452945231589_0014 completed successfully
+16/01/16 21:01:49 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1133400
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=141675
+		GPU_MB_MILLIS_MAPS=72537600
+		Total vcore-seconds taken by all map tasks=141675
+		Total megabyte-seconds taken by all map tasks=145075200
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1011
+		CPU time spent (ms)=69140
+		Physical memory (bytes) snapshot=14473121792
+		Virtual memory (bytes) snapshot=638179131392
+		Total committed heap usage (bytes)=15346434048
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 21:01:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:50 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 21:01:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 21:01:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 21:01:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:54 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 21:01:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:55 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 21:01:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:01:58 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 21:02:03 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 21:02:04 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 21:02:04 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 21:02:04 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 21:02:04 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0016
+16/01/16 21:02:04 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0016
+16/01/16 21:02:04 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0016/
+16/01/16 21:02:04 INFO mapreduce.Job: Running job: job_1452945231589_0016
+16/01/16 21:02:09 INFO mapreduce.Job: Job job_1452945231589_0016 running in uber mode : false
+16/01/16 21:02:09 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 21:02:17 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 21:02:19 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 21:02:23 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 21:02:27 INFO mapreduce.Job:  map 35% reduce 0%
+16/01/16 21:02:28 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 21:02:30 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 21:02:35 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/16 21:02:36 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 21:02:38 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 21:02:42 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 21:02:43 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 21:02:46 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 21:02:49 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 21:02:50 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 21:02:51 INFO mapreduce.Job: Job job_1452945231589_0016 completed successfully
+16/01/16 21:02:52 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1108760
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=138595
+		GPU_MB_MILLIS_MAPS=70960640
+		Total vcore-seconds taken by all map tasks=138595
+		Total megabyte-seconds taken by all map tasks=141921280
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=918
+		CPU time spent (ms)=68580
+		Physical memory (bytes) snapshot=14524440576
+		Virtual memory (bytes) snapshot=638153175040
+		Total committed heap usage (bytes)=15612772352
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 21:02:53 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:54 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 21:02:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:55 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 21:02:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:56 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 21:02:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:57 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 21:02:58 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:02:59 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 21:02:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 21:03:07 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 21:03:07 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 21:03:08 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 21:03:08 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 21:03:08 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0017
+16/01/16 21:03:08 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0017
+16/01/16 21:03:08 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0017/
+16/01/16 21:03:08 INFO mapreduce.Job: Running job: job_1452945231589_0017
+16/01/16 21:03:12 INFO mapreduce.Job: Job job_1452945231589_0017 running in uber mode : false
+16/01/16 21:03:12 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 21:03:23 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 21:03:29 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 21:03:30 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 21:03:33 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 21:03:37 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 21:03:38 INFO mapreduce.Job:  map 50% reduce 0%
+16/01/16 21:03:42 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 21:03:45 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 21:03:46 INFO mapreduce.Job:  map 70% reduce 0%
+16/01/16 21:03:51 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 21:03:52 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 21:03:53 INFO mapreduce.Job:  map 90% reduce 0%
+16/01/16 21:03:57 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 21:03:57 INFO mapreduce.Job: Job job_1452945231589_0017 completed successfully
+16/01/16 21:03:57 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1097496
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=137187
+		GPU_MB_MILLIS_MAPS=70239744
+		Total vcore-seconds taken by all map tasks=137187
+		Total megabyte-seconds taken by all map tasks=140479488
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=816
+		CPU time spent (ms)=69880
+		Physical memory (bytes) snapshot=14496518144
+		Virtual memory (bytes) snapshot=638173372416
+		Total committed heap usage (bytes)=15413018624
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
+16/01/16 21:03:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:58 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted native
+16/01/16 21:03:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:03:59 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+16/01/16 21:04:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:00 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+16/01/16 21:04:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:02 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_output
+16/01/16 21:04:02 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:03 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted cpu_input
+16/01/16 21:04:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:08 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/16 21:04:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+***Choose GPU Mode
+J:java.library.path = /user/master/native/program.so
+16/01/16 21:04:11 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+16/01/16 21:04:12 INFO input.FileInputFormat: Total input paths to process : 20
+16/01/16 21:04:12 INFO mapreduce.JobSubmitter: number of splits:20
+16/01/16 21:04:12 INFO Configuration.deprecation: mapred.job.queue.name is deprecated. Instead, use mapreduce.job.queuename
+16/01/16 21:04:13 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1452945231589_0019
+16/01/16 21:04:13 INFO impl.YarnClientImpl: Submitted application application_1452945231589_0019
+16/01/16 21:04:13 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1452945231589_0019/
+16/01/16 21:04:13 INFO mapreduce.Job: Running job: job_1452945231589_0019
+16/01/16 21:04:18 INFO mapreduce.Job: Job job_1452945231589_0019 running in uber mode : false
+16/01/16 21:04:18 INFO mapreduce.Job:  map 0% reduce 0%
+16/01/16 21:04:28 INFO mapreduce.Job:  map 5% reduce 0%
+16/01/16 21:04:30 INFO mapreduce.Job:  map 20% reduce 0%
+16/01/16 21:04:34 INFO mapreduce.Job:  map 25% reduce 0%
+16/01/16 21:04:38 INFO mapreduce.Job:  map 30% reduce 0%
+16/01/16 21:04:39 INFO mapreduce.Job:  map 40% reduce 0%
+16/01/16 21:04:42 INFO mapreduce.Job:  map 45% reduce 0%
+16/01/16 21:04:46 INFO mapreduce.Job:  map 55% reduce 0%
+16/01/16 21:04:47 INFO mapreduce.Job:  map 60% reduce 0%
+16/01/16 21:04:50 INFO mapreduce.Job:  map 65% reduce 0%
+16/01/16 21:04:54 INFO mapreduce.Job:  map 80% reduce 0%
+16/01/16 21:04:56 INFO mapreduce.Job:  map 85% reduce 0%
+16/01/16 21:05:02 INFO mapreduce.Job:  map 100% reduce 0%
+16/01/16 21:05:02 INFO mapreduce.Job: Job job_1452945231589_0019 completed successfully
+16/01/16 21:05:02 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2137990
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2250
+		HDFS: Number of bytes written=80
+		HDFS: Number of read operations=100
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=40
+	Job Counters 
+		Launched map tasks=20
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=1205360
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=150670
+		GPU_MB_MILLIS_MAPS=77143040
+		Total vcore-seconds taken by all map tasks=150670
+		Total megabyte-seconds taken by all map tasks=154286080
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=20
+		Input split bytes=2210
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=864
+		CPU time spent (ms)=78240
+		Physical memory (bytes) snapshot=14460403712
+		Virtual memory (bytes) snapshot=638156820480
+		Total committed heap usage (bytes)=15279849472
+	File Input Format Counters 
+		Bytes Read=40
+	File Output Format Counters 
+		Bytes Written=80
